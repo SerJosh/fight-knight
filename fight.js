@@ -39,13 +39,13 @@ class Sprite {
     c.fillRect(this.position.x, this.position.y, this.width, this.height)
 
     //Attack Box
-  // if (this.isAttacking) {
+  if (this.isAttacking) {
     c.fillStyle = 'green'
     c.fillRect(this.attackBox.position.x, 
       this.attackBox.position.y, 
       this.attackBox.width, 
       this.attackBox.height)
-  // }
+  }
 }
 
   update() {
@@ -188,7 +188,7 @@ function animate() {
         rectangle2: player
       }
     )
-    && player.isAttacking
+    && enemy.isAttacking
   ) {
     enemy.isAttacking = false
     console.log('enemy hit')
@@ -226,8 +226,11 @@ window.addEventListener('keydown' , (event) => {
     case 'ArrowUp':
       enemy.velocity.y = -20
       break
+    case 'ArrowDown':
+      enemy.attack()
+      break
   }
-  console.log(event.key)
+  // console.log(event.key)
 })
 
 // Keyup
@@ -253,5 +256,5 @@ window.addEventListener('keyup' , (event) => {
       keys.ArrowLeft.pressed = false
       break
   }
-  console.log(event.key)
+  // console.log(event.key)
 })
