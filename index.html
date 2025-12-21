@@ -1,3 +1,41 @@
-<canvas></canvas>
+<head>
+    <!-- Add CSS -->
+    <style>
+        * {
+           box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- Health and Timer Bar -->
+    <!-- Red Container Div -->
+<div style ='position: relative; display: inline-block'>
+    <!-- Smaller Red Container Div -->
+    <div style ='
+    position: absolute; 
+    display: flex; 
+    width: 100%; 
+    align-items: center;
+    padding: 20px;
+    '
+    >
+        <!-- Player Health Bar -->
+        <div style = 'background-color: yellow; height: 30px; width: 100%;'></div>
+        <!-- Timer -->
+        <div style="
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0; 
+        "
+        ></div>
+        <!-- Enemy Health Bar -->
+        <div style = 'background-color: yellow; height: 30px; width: 100%'></div>
+        <div></div>
+    </div>
+    <canvas></canvas>
+</div>
 
-<script src = 'fight.js'></script>
+    <script src = 'fight.js'></script>
+    
+</body>
